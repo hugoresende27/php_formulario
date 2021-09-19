@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins",sans-serif;
+}
+
+body{
+    display: flex;
+    padding:  10px;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #6495ED;
+}
+
+.conteudo_main{
+    width: 720px;
+    border-radius: 5px;
+    background:#C0C0C0 ;
+}
+
+.conteudo_main header{
+    font-size: 22pt;
+    font-weight: 800;
+    padding: 20px 30px;
+    border-bottom: 3px solid #141212;
+}
+
+.conteudo_main form{
+    margin: 35px 30px;
+}
+
+.conteudo_main form i{
+    position: absolute;
+    left: 18px;
+    top:50%;
+    color: #6495ED;
+    font-size: 17px;
+    pointer-events: none;
+    transform: translateY(-50%);
+}
+
+form .dbl-campo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.dbl-campo .campo{
+    height: 50px;
+    width: calc(100%/2-13px);
+    position: relative;
+}
+
+form .campo input, 
+form .msg textarea{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    padding: 0 18px 0 48px;
+    border-radius: 5px;
+    border: 1px solid #000000d0;
+    font-size: 18px;
+}
+
+.conteudo_main .campo i{
+    position: absolute;
+    left: 18px;
+    top:50%;
+    transform: translateY(-50%);
+    font-size: 17px;
+    pointer-events: none;
+    color: #6495ED;
+}
+
+form .campo input::placeholder, 
+form .msg textarea::placeholder{
+    color: #6495ED;
+}
+
+
+form .campo input:focus, 
+form .msg textarea:focus{
+    border: 3px solid #000080;
+}
+
+form .campo input:focus ~i{
+    color: #000080;
+} 
+
+form .msg textarea:focus ~i{
+    color: #000080;
+} 
+
+form .msg{
+    position: relative;
+}
+
+form .msg i{
+    top: 30px;
+    font-size: 20px;
+}
+
+form .msg textarea{
+    max-width: 100%;
+    max-width: 100%;
+    min-height: 120px;
+    max-height: 300px;
+    padding: 15px 20px 0 48px;
+}
+
+form .btn-campo{
+    margin: 25px 0;
+    display: flex;
+    align-items: center;
+}
+
+form .btn-campo span{
+    color: #000080;
+    margin: 30px;
+    display: none;
+}
+
+.btn-campo button{
+    padding: 13px 25px;
+    font-size: 18px;
+    border: none;
+    color: #6495ED;
+    cursor: pointer;
+    border-radius: 5px;
+    background: #000080;
+    padding: 13px 25px;
+}
+
+@media(max-width:600px){
+    .conteudo_main header{
+        text-align: center;
+    }
+    form .dbl-campo{
+        margin-bottom: 0px;
+        flex-direction: column;
+    }
+    .dbl-campo .campo{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    form .msg textarea{
+        resize: none;
+    }
+    form .btn-campo{
+        flex-direction: column;
+    }
+    .btn-campo button{
+        width: 100%;
+    }
+    .btn-campo button span{
+        text-align: center;
+        margin-right: 20px 0;
+    }
+
+}
