@@ -22,7 +22,7 @@ form.onsubmit = (e)=>{
   form.classList.add("disabled");
 
   let xhr = new XMLHttpRequest();
-  xhr.open("POST", "message.php", true);
+  xhr.open("POST", "mensagem.php", true);
   xhr.onload = ()=>{
     if(xhr.readyState == 4 && xhr.status == 200){
       let response = xhr.response;
