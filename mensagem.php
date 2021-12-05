@@ -6,6 +6,7 @@ $tele =htmlspecialchars($_POST['tele']);
 $site =htmlspecialchars($_POST['site']);
 $msg =htmlspecialchars($_POST['msg']);
 
+
 if (!empty ($mail) && !empty($msg) ) 
 {       //se mail e mensagem vazia
    // if(filter_var($mail, FILTER_VALIDATE_mail)){
@@ -13,6 +14,7 @@ if (!empty ($mail) && !empty($msg) )
         $subject = "From: $nome <$mail>";
         $body = "nome: $nome\nEmail: $mail\nTelemóvel: $tele\nWebsite: $site\n\nMensagem:\n$msg\n\nCumprimentos,\n$nome";
         $sender = "From: $mail";
+       
         if(mail($receiver, $subject, $body, $sender)){
         echo "Mensagem enviada";
         }else{
